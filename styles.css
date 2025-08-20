@@ -6,42 +6,81 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* IMPORTANTE: Substitua 'fundo.jpg' por uma imagem de céu estrelado ou fantasia pixel art */
     background: url('fundo.jpg') no-repeat center center fixed;
+    background-color: #1a1a2e; /* Cor de fundo caso a imagem falhe */
     background-size: cover;
     color: #e0e0e0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center;
     padding: 40px 20px;
+    font-family: 'Roboto', sans-serif; /* Nova fonte padrão */
 }
 
 /* Container principal */
 #main {
-    background: rgba(30, 30, 30, 0.75);
+    background: rgba(22, 22, 39, 0.85); /* Tom de roxo/azul escuro, mais temático */
     max-width: 700px;
+    width: 100%;
     margin: auto;
     padding: 40px;
     border-radius: 16px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(247, 215, 148, 0.5); /* Borda dourada sutil */
 }
 
-/* Título principal */
+/* Títulos */
+h1, h2 {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelada para títulos */
+    color: #f7d794; /* Dourado, remetendo a tesouros e magia */
+    text-shadow: 3px 3px 0px #3c1e5a; /* Sombra para dar um efeito de título de jogo */
+    margin-bottom: 25px;
+}
+
 h1 {
-    font-size: 2.5rem;
-    color: #00d4ff;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 40px;
 }
 
 /* Texto */
 p {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 16px;
     color: #ccc;
+}
+
+/* Lista de Hobbies */
+.hobby-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.hobby-list li {
+    margin-bottom: 12px;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.hobby-list li::before {
+    content: '❖'; /* Um ícone que remete a fantasia */
+    position: absolute;
+    left: 0;
+    color: #f7d794;
+    font-size: 1.2em;
+    line-height: 1;
 }
 
 /* Agregador de links */
@@ -53,41 +92,40 @@ p {
 }
 
 .link-aggregator a {
-    display: block;
-    background-color: rgba(0, 212, 255, 0.1);
-    color: #00d4ff;
+    background-color: transparent;
+    color: #f7d794;
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 15px 20px;
     border-radius: 10px;
     font-size: 1.1rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    border: 1px solid #00d4ff;
-    backdrop-filter: blur(4px);
+    border: 2px solid #f7d794;
 }
 
 .link-aggregator a:hover {
-    background-color: #00d4ff;
-    color: #1a1a1a;
-    transform: translateY(-2px);
+    background-color: #f7d794;
+    color: #1a1a2e;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 4px 15px rgba(247, 215, 148, 0.3);
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
     font-size: 0.95rem;
     color: #aaa;
 }
 
 footer a {
-    color: #ff69b4;
+    color: #b39ddb; /* Um roxo mais suave que combina com a paleta */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #00ffa6;
+    color: #f7d794;
     text-decoration: underline;
 }
